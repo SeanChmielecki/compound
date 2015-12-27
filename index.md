@@ -87,3 +87,5 @@ future_value(principal, rate, time)
 ```
 
 The future value is $12093.59.
+
+<sub><sup>For .Rmd file, see: https://github.com/kevinwu6/compound/blob/gh-pages/index.Rmd</sup></sub>

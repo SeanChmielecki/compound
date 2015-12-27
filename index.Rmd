@@ -81,3 +81,5 @@ future_value(principal, rate, time)
 ```
 
 The future value is $`r sprintf('%.2f', future_value(principal, rate, time))`.
+
+<sub><sup>For .Rmd file, see: https://github.com/kevinwu6/compound/blob/gh-pages/index.Rmd</sup></sub>

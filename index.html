@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Compound Interest</title>
+  <title>Compound Interest Calculator</title>
   <meta charset="utf-8">
-  <meta name="description" content="Compound Interest">
+  <meta name="description" content="Compound Interest Calculator">
   <meta name="author" content="Kevin Wu">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -32,7 +32,7 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Compound Interest</h1>
+    <h1>Compound Interest Calculator</h1>
     <h2></h2>
     <p>Kevin Wu<br/></p>
   </hgroup>
@@ -46,25 +46,35 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Compound Interest</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+    <p><strong>Compound interest</strong> is the interest calculated on an initial principal deposit or loan <em>plus</em> accumulated interest.</p>
+
+<ol>
+<li>The principal amount grows faster than with simple interest.</li>
+<li>The higher the number of compounding periods, the greater the compound interest.</li>
+<li>The rate depends on the frequency of compounding.</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="class" id="id" style="background:;">
+<slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Compound Interest Calculator</h2>
   </hgroup>
   <article data-timings="">
-    <p>Compound interest can be calculated using this app.</p>
+    <p>The <strong>Compound Interest Calculator</strong> app allows you to calculate compound interest based on your input:</p>
+
+<ul>
+<li>Principal Amount</li>
+<li>Annual Interest Rate</li>
+<li>Time Period (assuming annual compounding)</li>
+</ul>
+
+<p>The resulting calculation is the total future value of the deposit or loan — the principal amount plus compound interest.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -72,11 +82,65 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>Code</h2>
+    <h2>Benefits</h2>
   </hgroup>
   <article data-timings="">
-    <p>Here is some R code.</p>
+    <p>This app will benefit you because.</p>
 
+<ol>
+<li>Won&#39;t have to perform manual calculations.</li>
+<li>No need to memorize the formula. Just plug in the numbers and go.</li>
+<li>Can use as a savings tool — see how much your money will be worth.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Calculator Function</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is the formula that is used.</p>
+
+<p>\[Future\ Value = Principal \times (1 + Rate)^{Time}\]&#39;</p>
+
+<p>This is the code that is run when you hit the &quot;submit&quot; button.</p>
+
+<pre><code class="r">future_value &lt;- function(principal, rate, time) {
+    principal * (1 + rate / 100)^(time)
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Now we can test out the function using these values.</p>
+
+<pre><code class="r">principal &lt;- 10000
+rate &lt;- 3.875
+time &lt;- 5
+
+future_value(principal, rate, time)
+</code></pre>
+
+<pre><code>## [1] 12093.59
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -87,20 +151,38 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Compound Interest'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Compound Interest Calculator'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Code'>
+        data-slide=3 title='Benefits'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Calculator Function'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Example'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='NA'>
+         6
       </a>
     </li>
   </ul>
@@ -113,7 +195,21 @@
 </body>
   <!-- Load Javascripts for Widgets -->
   
-  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
   <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <!-- DONE LOADING HIGHLIGHTER JS FILES -->
